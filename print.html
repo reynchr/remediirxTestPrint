@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            // Extract the target URI from the query string
+            var params = new URLSearchParams(window.location.search);
+            var targetUri = params.get('uri');
+            if (targetUri) {
+                window.location.href = targetUri+"://";
+            } else {
+                document.body.innerHTML = 'Invalid or missing URI!';
+            }
+        };
+    </script>
+</head>
+<body>
+    Redirecting...
+</body>
+</html>
